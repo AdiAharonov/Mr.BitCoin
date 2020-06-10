@@ -1,0 +1,41 @@
+h2 {
+    text-align: center;
+}
+
+.contacts {
+    width: 100%;
+    
+}
+
+.contacts ul {
+    padding: 0 !important;
+}
+
+.contacts li {
+    list-style: none;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    border: 1px rgb(94, 164, 211) solid;
+    border-radius: 10px;
+    background-color: rgba(163, 180, 212, 0.473);
+}
+
+.contacts li div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts li button {
+    background: none;
+    height: 30px;
+    width: 30px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(151, 151, 221, 0.781);
+    margin: auto 20px;
+    cursor: poiner;
+    outline: none;
+}

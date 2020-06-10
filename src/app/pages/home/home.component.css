@@ -1,0 +1,31 @@
+.home {
+    width: 100%;
+    text-align: center;
+}
+
+.home img {
+    width: 50px;
+}
+
+.home div {
+    margin-top: 20px;
+}
+
+.home p {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.currAmount {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.currBTC {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
