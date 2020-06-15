@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import {ContactService, Contact} from '../../services/contact.service';
 @Component({
   selector: 'app-contacts-page',
@@ -6,21 +6,32 @@ import {ContactService, Contact} from '../../services/contact.service';
   styleUrls: ['./contacts-page.component.css']
 })
 export class ContactsPageComponent implements OnInit {
-  contacts : Contact[]
+  contacts : Contact[];
+ values = {term: ''}
 
   constructor(private contactService : ContactService) {}
-
+  
   ngOnInit() {
     this.contactService.contacts$.subscribe(contacts => {
-      console.log('Contacts', contacts);
       this.contacts = contacts;
     })
     this.contactService.loadContacts();
   }
 
+  ngAfterContentChecked() {
+    if (this.values) {
+      this.contactService.loadContacts(this.values);
+    }
+  }
+
   async removeContact(contactId) {
     await this.contactService.deleteContact(contactId);
     console.log('Deleted');
+  }
+
+  onKey(event: any) { // without type info
+    this.values.term = event.target.value;
+    
   }
 
 }

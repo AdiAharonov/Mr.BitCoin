@@ -1,7 +1,16 @@
 
 <section class="userDetails">
-    <img src="https://img.icons8.com/officel/80/000000/user.png"/>
-    <h2>{{user.name}}</h2>
-    <p>Phone: {{user.phone}}</p>
-    <p>Email: {{user.email}}</p>
+    <img class="user-img" src="https://img.icons8.com/cotton/64/000000/user-male--v4.png"/>
+    <h2 style="color: #ede68a">{{user.name}}</h2>
+    <p>{{user.phone}}</p>
+    <p>{{user.email}}</p>
+</section>
+
+<img class="edit-contact" [routerLink]="['/edit/', user._id]" src="https://img.icons8.com/material/48/b0a565/edit--v1.png"/>
+
+<section class="coin-transfer">
+    <form (submit)="transferCoin()">
+        <input type="number" name="transferValue" [(ngModel)]="transferValue" placeholder="$$$" class="coin-transfer-input" />
+        <button>Transfer</button>
+    </form>
 </section>

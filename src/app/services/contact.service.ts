@@ -147,7 +147,7 @@ export class ContactService {
   public loadContacts(filterBy = null): void {
     let contacts = this._contacts;
     if (filterBy && filterBy.term) {
-      contacts = this._filter(filterBy.term, contacts)
+      contacts = this._filter(contacts, filterBy.term)
     }
     this._contacts$.next(this._sort(contacts))
   }
@@ -181,7 +181,8 @@ export class ContactService {
 
   private _addContact(contact: Contact) {
     //mock the server work
-    const newContact = new Contact(contact.name, contact.email, contact.phone);
+    const newContact = new Contact(contact._id, contact.name, contact.email, contact.phone);
+    console.log(newContact)
     newContact.setId();
     this._contacts.push(newContact)
     this._contacts$.next(this._sort(this._contacts))

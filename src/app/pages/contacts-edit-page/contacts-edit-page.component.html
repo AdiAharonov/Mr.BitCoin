@@ -1,1 +1,12 @@
-<p>contacts-edit-page works!</p>
+<div class="user-img-container">
+    <img class="user-img" src="https://img.icons8.com/cotton/64/000000/user-male--v4.png"/>
+</div>
+
+<section class="add-contact">
+  <form (submit)="addContact()">
+    <input name="name" placeholder="Name" [(ngModel)]="user.name" />
+    <input name="email" placeholder="Email" [(ngModel)]="user.email" />
+    <input name="phone" placeholder="Phone" [(ngModel)]="user.phone" />
+    <button>Save</button>
+  </form>
+</section>

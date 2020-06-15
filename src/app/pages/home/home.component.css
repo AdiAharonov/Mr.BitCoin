@@ -28,4 +28,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 20px;
+}
+
+
+.user-greeting {
+    width: 100%;
+    background-color: rgba(18, 19, 20, 0.582);
+    padding: 15px 30px;
+    text-align: left;
+}
+
+.user-data {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 470px) {
+    .user-data {
+        display: inline-block;
+    }
 }

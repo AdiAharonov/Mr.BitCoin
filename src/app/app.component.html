@@ -1,17 +1,19 @@
 
   <header>
-    <div class="container">
-      <a href="#" class="logo">Mister-BitCoin</a>
+    <div class="navBar">
+      <a href="#" class="logo">Mr.BitCoin</a>
       <nav>
         <ul>
-          <li><a routerLink="/">Home</a></li>
-          <li><a routerLink="/contacts">Contacts</a></li>
-          <li><a routerLink="/charts">Charts</a></li>
+          <li routerLink="/"><img src="../assets/icons/home.png" /></li>
+          <li routerLink="/contacts"><img src="../assets/icons/team.png" /></li>
+          <li routerLink="/charts"><img src="../assets/icons/graph.png" /></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <div class="container">
+  <div class="background">
+  </div>
+  <div class="main-content">
     <router-outlet></router-outlet>
   </div>
