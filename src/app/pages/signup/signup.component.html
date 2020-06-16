@@ -1,0 +1,13 @@
+<div class="signup-container">
+  <img src="https://img.icons8.com/ios/150/b0a565/exchange-bitcoin.png" />
+
+  <form (submit)="onSignUp()">
+    <input
+      type="text"
+      name="userName"
+      placeholder="Full Name"
+      [(ngModel)]="userName"
+    />
+    <button>Sign Up</button>
+  </form>
+</div>

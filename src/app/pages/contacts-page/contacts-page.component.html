@@ -1,0 +1,22 @@
+
+<input autofocus class="search-contact" type="text" placeholder="Search..." (keyup)="onKey($event)">
+
+<section class="contacts">
+    <ul>
+      <li *ngFor="let contact of contacts"> 
+          <div [routerLink]="['/contact/', contact._id]">
+            <img class="user-img" src="https://img.icons8.com/cotton/64/000000/user-male--v4.png"/>
+              <div class="user-preview-details">
+                <h3>{{contact.name}}</h3>
+                <h5>{{contact.phone}}</h5>
+              </div>
+          </div>
+        <button (click)="removeContact(contact._id)">x</button>
+      </li>
+      
+    </ul>
+  </section>
+
+  <button class="addContact" routerLink="/edit">+</button>
+
+ 
