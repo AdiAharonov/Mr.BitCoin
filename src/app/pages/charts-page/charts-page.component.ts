@@ -10,7 +10,7 @@ export class ChartsPageComponent implements OnInit {
 
  public tradeVolume = {title: '',type: 'LineChart',data: [],columnNames: [] }
  public marketPrice = {title: '',type: 'LineChart',data: [],columnNames: [] }
- 
+ public options = {backgroundColor:'#2f3032', colors: ['#ede68a'], hAxis: {textStyle: {color: '#fff', fontSize:12}}, vAxis: {textStyle: {color: '#fff', fontSize:12}}}
 
   constructor() { }
 
